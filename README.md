@@ -16,12 +16,12 @@ Please visit the following link to download the dataset.
 - [Occ-Duke](https://github.com/lightas/Occluded-DukeMTMC-Dataset)
 - [SYSU-mm01](https://www.isee-ai.cn/project/RGBIRReID.html)
 
-Once you download the datasets, make sure to modify the dataset's root manually. 
+Once you download the datasets, make sure to modify the dataset's root manually [here](https://github.com/iSEE-Laboratory/VersReID/blob/main/configs/ReID-Bank.yml#L55) and [here](https://github.com/iSEE-Laboratory/VersReID/blob/main/configs/V-Branch.yml#L58). 
 
 ## Environments
 Please follow [TransReID](https://github.com/damo-cv/TransReID) to configure the running environment. 
 
-We provide our used package list in [full-environment.txt](https://github.com/yanjk3/VersReID/blob/main/full-environment.txt) for a reference.
+We provide our used package list in [full-environment.txt](https://github.com/iSEE-Laboratory/VersReID/blob/main/full-environment.txt) for a reference.
 
 
 ## Run
