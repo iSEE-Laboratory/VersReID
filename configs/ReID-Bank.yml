@@ -1,0 +1,98 @@
+MODEL:
+  ATT_DROP_RATE: 0.0
+  BLOCK_WARMUP_EPOCHS: -1
+  COS_LAYER: False
+  DEVICE: 'cuda'
+  DEVICE_ID: ('1')
+  DEVIDE_LENGTH: 4
+  DIST_TRAIN: False
+  DROP_OUT: 0.0
+  DROP_PATH: 0.2
+  EMA: False
+  EMA_M: 0.999
+  EMA_S: 1
+  ID_LOSS_TYPE: 'softmax'
+  ID_LOSS_WEIGHT: 1.0
+  IF_LABELSMOOTH: 'off'
+  IF_WITH_CENTER: 'no'
+  JPM: False
+  LAST_STRIDE: 1
+  METRIC_LOSS_TYPE: 'triplet'
+  MULTI_SCENES: True
+  NAME: 'transformer'
+  NECK: 'bnneck'
+  NO_MARGIN: True
+  PRETRAIN_CHOICE: 'LUP'
+  PRETRAIN_PATH: 'Input in command'
+  RE_ARRANGE: True
+  SHIFT_NUM: 5
+  SHUFFLE_GROUP: 2
+  SIE_CAMERA: False
+  SIE_COE: 3.0
+  SIE_VIEW: False
+  STRIDE_SIZE: [16, 16]
+  STU: False
+  SCENE_PROMPT_TYPE: 1
+  SCENE_PROMPT_NUMS: 2
+  TRANSFORMER_TYPE: 'vit_base_patch16_224_TransReID'
+  TRIPLET_LOSS_WEIGHT: 1.0
+  TYPE: 'TR'
+
+INPUT:
+  SIZE_TRAIN: [384, 128]
+  SIZE_TEST: [384, 128]
+  PROB: 0.5 # random horizontal flip
+  RE_PROB: 0.5 # random erasing
+  PADDING: 10
+  PIXEL_MEAN: [0.5, 0.5, 0.5]
+  PIXEL_STD: [0.5, 0.5, 0.5]
+
+DATASETS:
+  NAMES: ('combine')
+  COMBINE_NAMES: [ 'dslr_cuhk03', 'market1501', 'msmt17', 'celebrity', 'prcc', 'occluded_duke', 'sysumm01' ]
+  COMBINE_TYPE: [0, 1, 1, 2, 2, 3, 4]
+  COMBINE_PID: True
+  ROOTS: ['/data1/data/junkai/MLR-CUHK03/', '/data1/data/junkai/Market-1501/', '/data1/data/junkai/MSMT17_V1/', '/data1/data/junkai/Celeb-reID/', '/data1/data/junkai/prcc', '/data1/data/junkai/Occluded-DukeMTMC', '/data1/data/junkai/SYSU-MM01-1/']
+
+DATALOADER:
+  COMBINE_SAMPLER: 'softmax_triplet'
+  SAMPLER: 'softmax_triplet'
+  NUM_INSTANCE: 4
+  NUM_WORKERS: 8
+
+SOLVER:
+  BASE_LR: 0.0004
+  BIAS_LR_FACTOR: 2
+  CENTER_LOSS_WEIGHT: 0.0005
+  CENTER_LR: 0.5
+  CHECKPOINT_PERIOD: 120
+  COSINE_MARGIN: 0.5
+  COSINE_SCALE: 30
+  END_EPOCHS: -1
+  EVAL_PERIOD: 30
+  GAMMA: 0.1
+  IMS_PER_BATCH: 128
+  LARGE_FC_LR: False
+  LOG_PERIOD: 200
+  MARGIN: 0.3
+  MAX_EPOCHS: 120
+  MIN_LR: 0.0
+  MOMENTUM: 0.9
+  OPTIMIZER_NAME: 'SGD'
+  SEED: 1234
+  STEPS: (40, 70)
+  WARMUP_EPOCHS: 20
+  WARMUP_FACTOR: 0.01
+  WARMUP_METHOD: 'cosine'
+  WEIGHT_DECAY: 0.0001
+  WEIGHT_DECAY_BIAS: 0.0001
+
+TEST:
+  EVAL: True
+  IMS_PER_BATCH: 256
+  RE_RANKING: False
+  WEIGHT: ''
+  NECK_FEAT: 'before'
+  FEAT_NORM: 'yes'
+
+OUTPUT_DIR: './logs/ReID-Bank/'

@@ -1,0 +1,2 @@
+from .multi_scene_training_processor import do_multi_scene_train
+from .multi_scene_distillate_processor import do_multi_scene_distillate
