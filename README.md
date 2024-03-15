@@ -42,16 +42,5 @@ If you have any problem, feel free to open an issue or contact me :-)
 ## Acknowledgement
 - This repository is heavily based on [TransReID](https://github.com/damo-cv/TransReID), many thanks to the authors.
 
-- If you use this paper/code in your research, please consider citing us:
-```
-@article{versreid,
-  title={A Versatile Framework for Multi-scene Person Re-identification},
-  author={Zheng, Wei-Shi and Yan, Junkai and Peng, Yi-Xing},
-  journal={Transactions on Pattern Analysis and Machine Intelligence},
-  volume={-},
-  number={-},
-  pages={--},
-  year={2024},
-  publisher={IEEE}
-}
-```
+- The bibtex will be complemented in the near future.
+
