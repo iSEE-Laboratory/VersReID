@@ -1,8 +1,9 @@
 # VersReID
-Offical implementation of Paper ''A Versatile Framework for Multi-scene Person Re-identification''.
+Official implementation of Paper ''A Versatile Framework for Multi-scene Person Re-identification''.
 
 ![](./assets/main_figure.png)
 ## News
+2024/3/19: Our arxiv paper can be found [here](https://arxiv.org/abs/2403.11121)
 2024/3/16: Code and Pre-trained model are released. Check [Baidu Drive](https://pan.baidu.com/s/1TopJ37U9ZlmxQ2-HyP9kqw?pwd=pami) for the pre-trained model (key: pami)
 
 
@@ -42,5 +43,12 @@ If you have any problem, feel free to open an issue or contact me :-)
 ## Acknowledgement
 - This repository is heavily based on [TransReID](https://github.com/damo-cv/TransReID), many thanks to the authors.
 
-- The bibtex will be complemented in the near future.
-
+- If you find this repo helpful, please consider citing us:
+```
+@article{zheng2024versreid,
+  title = {A Versatile Framework for Multi-scene Person Re-identification},
+  author = {Zheng, Wei-Shi and Yan, Junkai and Peng, Yi-Xing},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year = {2024}
+}
+```
