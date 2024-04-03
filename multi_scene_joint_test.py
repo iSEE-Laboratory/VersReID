@@ -46,6 +46,7 @@ if __name__ == "__main__":
 
     device = "cuda"
     cfg.defrost()
+    cfg.MODEL.AUX_LOSS = False if cfg.MODEL.AUX_PROMPT_NUMS == 0 else True
     model = make_model(cfg, num_class=total_classes, camera_num=0, view_num=0)
     ckpt = torch.load(cfg.TEST.WEIGHT, 'cpu')
     new_ckpt = {}
