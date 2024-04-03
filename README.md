@@ -7,7 +7,7 @@ Official implementation of Paper ''A Versatile Framework for Multi-scene Person 
 
 2024/3/19: Our arxiv paper can be found [here](https://arxiv.org/abs/2403.11121)
 
-2024/3/16: Code and Pre-trained model are released. Check [Baidu Drive](https://pan.baidu.com/s/1TopJ37U9ZlmxQ2-HyP9kqw?pwd=pami) and [Google Drive](https://drive.google.com/file/d/1D-9sGqlNtZSolTgVY0yPamW3sHhzyIc4/view?usp=sharing) for the pre-trained model (key: pami)
+2024/3/16: Code and Pre-trained model are released. Check [Baidu Drive](https://pan.baidu.com/s/1TopJ37U9ZlmxQ2-HyP9kqw?pwd=pami) and [Google Drive](https://drive.google.com/file/d/1D-9sGqlNtZSolTgVY0yPamW3sHhzyIc4/view?usp=sharing) for the pre-trained model
 
 
 ## Datasets
