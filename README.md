@@ -3,6 +3,8 @@ Official implementation of Paper ''A Versatile Framework for Multi-scene Person 
 
 ![](./assets/main_figure.png)
 ## News
+2024/4/3: The v-branch model checkpoint is released at [Baidu Drive](https://pan.baidu.com/s/190e1vHzYUry9LTivNiWM5Q?pwd=pami)
+
 2024/3/19: Our arxiv paper can be found [here](https://arxiv.org/abs/2403.11121)
 
 2024/3/16: Code and Pre-trained model are released. Check [Baidu Drive](https://pan.baidu.com/s/1TopJ37U9ZlmxQ2-HyP9kqw?pwd=pami) for the pre-trained model (key: pami)
@@ -38,6 +40,21 @@ bash ./bash/run_VersReID.sh
 You can modify the configs by yourself to explore more settings.
 
 __Note__: Training the ReID-Bank requires ~20G GPU Memory, V-Branch requires ~30G GPU Memory. We highly recommend use cuda 10.2 for better reproducibility. Moreover, the code does not support multi-GPU training currently. 
+
+- To test the provided v-branch checkpoint, you can download the checkpoint at [Baidu Drive](https://pan.baidu.com/s/190e1vHzYUry9LTivNiWM5Q?pwd=pami) and run the below script:
+```
+python multi_scene_single_test.py --config_file configs/V-Branch.yml MODEL.DEVICE_ID "('0')" \
+  MODEL.PRETRAIN_CHOICE none \
+  TEST.WEIGHT /path/to/v-branch.pth \
+  MODEL.AUX_LOSS True \
+  OUTPUT_DIR logs/V-Branch/
+
+python multi_scene_joint_test.py --config_file configs/V-Branch.yml MODEL.DEVICE_ID "('0')" \
+  MODEL.PRETRAIN_CHOICE none \
+  TEST.WEIGHT /path/to/v-branch.pth \
+  MODEL.AUX_LOSS True \
+  OUTPUT_DIR logs/V-Branch/
+```
 
 If you have any problem, feel free to open an issue or contact me :-)
 
