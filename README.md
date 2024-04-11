@@ -62,7 +62,7 @@ If you have any problem, feel free to open an issue or contact me :-)
 - This repository is heavily based on [TransReID](https://github.com/damo-cv/TransReID), many thanks to the authors.
 
 - If you find this repo helpful, please consider citing us:
-```
+``` bibtex
 @article{zheng2024versreid,
   title = {A Versatile Framework for Multi-scene Person Re-identification},
   author = {Zheng, Wei-Shi and Yan, Junkai and Peng, Yi-Xing},
